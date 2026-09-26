@@ -16,9 +16,9 @@ public:
                     temp+=s[i];
                     i++;
                 }
-                cout<<temp<<endl;
+               
                 if(mp.find(temp)!=mp.end()){
-                    cout<<mp[temp]<<endl;
+                  
                      ans+=mp[temp];
                 }
                 else ans+='?';
