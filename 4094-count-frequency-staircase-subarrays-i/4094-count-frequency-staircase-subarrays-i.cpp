@@ -2,7 +2,7 @@ class Solution {
 public:
     int countStaircase(vector<int>& nums) {
         int n = nums.size();
-        int ans = 0;  // Every single-element subarray is valid.
+        int ans = 0;  
 
         for (int i = 0; i < n; i++) {
             unordered_map<int, pair<int, int>> mp;
@@ -14,12 +14,10 @@ public:
             for (int j = i; j < n; j++) {
                 int len = j - i + 1;
 
-                // A valid staircase of k distinct values
-                // must have length k * (k + 1) / 2.
+              
                 int k = distinct;
                 if (len > 1 && len != k * (k + 1) / 2) {
-                    // Continue updating frequencies, but only
-                    // validate when the length is triangular.
+                  
                 }
 
                 auto it = mp.find(nums[j]);
