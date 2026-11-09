@@ -23,7 +23,7 @@ public:
             if(st.empty())continue;
             if(st.count(i%k)){
                 int val=i%k;
-                cout<<val<<" ";
+             
                 v[val]++;
                 st.erase(val);
                 wait.push({t+load[i],val});
@@ -36,15 +36,14 @@ public:
             int s = *it;
             st.erase(it);
             wait.push({t + load[i], s});
-            cout<<s<<" ";
+          
             v[s]++;
             }
         }
-        cout<<endl;
+       
         int mx=0;
         vector<int>ans;
         for(int i=0;i<k;i++){
-            cout<<v[i]<<" ";
            mx=max(v[i],mx); 
         }
         for(int i=0;i<k;i++){
